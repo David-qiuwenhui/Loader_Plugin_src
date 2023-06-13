@@ -10,17 +10,27 @@ module.exports = {
     },
     module: {
         rules: [
-            {
+            /* {
                 test: /\.js$/,
                 loader: "./loaders/test-loader.js",
-            },
+            }, */
+            /* {
+                test: /\.js$/,
+                // 执行顺序：从右到左 从上到下
+                use: [
+                    "./loaders/demo/test1",
+                    "./loaders/demo/test2",
+                    "./loaders/demo/test3",
+                ],
+            }, */
             {
                 test: /\.js$/,
-                loader: "./loaders/test-loader.js",
-            },
-            {
-                test: /\.js$/,
-                loader: "./loaders/test-loader.js",
+                // 执行顺序：从右到左 从上到下
+                use: [
+                    "./loaders/demo/test4",
+                    "./loaders/demo/test5",
+                    "./loaders/demo/test6",
+                ],
             },
         ],
     },

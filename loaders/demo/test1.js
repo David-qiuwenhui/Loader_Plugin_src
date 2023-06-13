@@ -8,5 +8,6 @@ module.exports = function (content, map, meta) {
     // 第二个参数 content 处理后的内容
     // 第三个参数 source-map 继续传递source-map
     // 第四个参数 meta 给下一个loader传递参数
+    console.log("sync loader");
     this.callback(null, content, map, meta);
 };
