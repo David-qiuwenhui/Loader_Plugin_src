@@ -13,11 +13,11 @@
 4. Pitching Loader
 
 ### Loader API
-手写 clean-log-loader
-手写 banner-loader
-手写 babel-loader
-手写 file-loader
-手写 style-loader
+1. 手写 clean-log-loader
+2. 手写 banner-loader
+3. 手写 babel-loader
+4. 手写 file-loader
+5. 手写 style-loader
 
 ## Plugin原理
 ### Plugin的作用

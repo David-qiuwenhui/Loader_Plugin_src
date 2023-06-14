@@ -50,6 +50,15 @@ module.exports = {
                     presets: ["@babel/preset-env"],
                 },
             },
+            {
+                test: /\.(png|jpe?g|gif)$/,
+                loader: "./loaders/file-loader/index.js",
+                type: "javascript/auto", // 阻止webpack默认处理图片资源 只使用file-loader处理
+            },
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"],
+            },
         ],
     },
     plugins: [

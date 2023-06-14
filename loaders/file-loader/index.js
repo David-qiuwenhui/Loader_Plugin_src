@@ -9,9 +9,10 @@ module.exports = function (content) {
             content,
         }
     );
-    console.log("🚀 ~ file: index.js:12 ~ interpolatedName:", interpolatedName);
     // 2. 将文件输出出去
+    this.emitFile(interpolatedName, content);
     // 3. 返回：module.exports = "文件路径（文件名）"
+    return `module.exports = "${interpolatedName}"`;
 };
 
 // 需要处理图片、字体等文件 Buffer数据

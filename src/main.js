@@ -1,6 +1,7 @@
+import "./css/index.css";
+
 console.log("main function");
 
-arr = [1, 2, 3];
-const sum = (arr) => {
+const sum = (...args) => {
     arr.reduce((pre, cur) => pre + cur, 0);
 };
