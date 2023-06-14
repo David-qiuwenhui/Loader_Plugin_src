@@ -23,7 +23,7 @@ module.exports = {
                     "./loaders/demo/test3",
                 ],
             }, */
-            {
+            /* {
                 test: /\.js$/,
                 // 执行顺序：从右到左 从上到下
                 use: [
@@ -31,6 +31,24 @@ module.exports = {
                     "./loaders/demo/test5",
                     "./loaders/demo/test6",
                 ],
+            }, */
+            {
+                test: /\.js$/,
+                use: "./loaders/clean-log-loader.js",
+            },
+            {
+                test: /\.js$/,
+                loader: "./loaders/banner-loader/index.js",
+                options: {
+                    author: "David",
+                },
+            },
+            {
+                test: /\.js$/,
+                loader: "./loaders/babel-loader/index.js",
+                options: {
+                    presets: ["@babel/preset-env"],
+                },
             },
         ],
     },

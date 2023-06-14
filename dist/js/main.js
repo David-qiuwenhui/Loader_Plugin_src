@@ -7,6 +7,7 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./src/main.js":
@@ -15,7 +16,7 @@
   \*********************/
 /***/ (() => {
 
-eval("123\n\n//# sourceURL=webpack://loader_plugin_src/./src/main.js?");
+eval("\n        /*\n        * Author: David\n        */\n     \n \n\n\narr = [1, 2, 3];\nvar sum = function sum(arr) {\n  arr.reduce(function (pre, cur) {\n    return pre + cur;\n  }, 0);\n};\n\n//# sourceURL=webpack://loader_plugin_src/./src/main.js?");
 
 /***/ })
 
