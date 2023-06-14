@@ -55,9 +55,13 @@ module.exports = {
                 loader: "./loaders/file-loader/index.js",
                 type: "javascript/auto", // 阻止webpack默认处理图片资源 只使用file-loader处理
             },
-            {
+            /* {
                 test: /\.css$/,
                 use: ["style-loader", "css-loader"],
+            }, */
+            {
+                test: /\.css$/,
+                use: ["./loaders/style-loader", "css-loader"],
             },
         ],
     },

@@ -1,3 +1,10 @@
+/*
+@author: qiuwenhui
+@Software: VSCode
+@Time: 2023-06-14 15:31:49
+@Module: file-loader
+*/
+
 const loaderUtils = require("loader-utils");
 
 module.exports = function (content) {
