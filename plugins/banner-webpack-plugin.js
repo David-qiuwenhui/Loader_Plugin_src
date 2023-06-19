@@ -10,13 +10,14 @@ class BannerWebpackPlugins {
         this.options = options;
     }
 
+    // 需要使用 compiler.hooks.emit 钩子, 它是打包输出前触发
     apply(compiler) {
         compiler.hooks.emit.tapAsync(
             "BannerWebpackPlugins",
             (compilation, callback) => {
                 // debugger;
                 const extensions = ["css", "js"];
-                // 1. 获取即将输出的资源文件 compilation.assets
+                // 1. 获取所有即将输出的资源文件 compilation.assets
                 // 2. 过滤只保留js和css资源
                 const assets = Object.keys(compilation.assets).filter(
                     (assetPath) => {
