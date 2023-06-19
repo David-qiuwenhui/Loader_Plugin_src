@@ -17,6 +17,7 @@ class TestPlugin {
     }
 
     apply(compiler) {
+        debugger;
         console.log("🔌TestPlugins apply");
 
         // environment是同步钩子 需要使用tap注册
@@ -47,6 +48,11 @@ class TestPlugin {
 
         // make是异步并行钩子 AsyncParallelHook
         compiler.hooks.make.tapAsync("TestPlugins", (compilation, callback) => {
+            // 需要在compilation hooks触发前注册才能使用
+            compilation.hooks.seal.tap("TestPlugins", () => {
+                console.log("TestPlugin🔌 seal");
+            });
+
             setTimeout(() => {
                 console.log("*** TestPlugin🪝 make 111 ");
                 callback();
