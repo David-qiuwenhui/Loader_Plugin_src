@@ -1,1 +1,106 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Webpack</title><script defer="defer" src="js/main.js"></script></head><body><div class="box1"></div><div class="box2"></div><div class="box3"></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Webpack</title>
+        <script>
+            (() => {
+                "use strict";
+                var e,
+                    r = {},
+                    o = {};
+                function t(e) {
+                    var n = o[e];
+                    if (void 0 !== n) return n.exports;
+                    var l = (o[e] = { id: e, exports: {} });
+                    return r[e](l, l.exports, t), l.exports;
+                }
+                (t.m = r),
+                    (e = []),
+                    (t.O = (r, o, n, l) => {
+                        if (!o) {
+                            var a = 1 / 0;
+                            for (s = 0; s < e.length; s++) {
+                                for (
+                                    var [o, n, l] = e[s], i = !0, u = 0;
+                                    u < o.length;
+                                    u++
+                                )
+                                    (!1 & l || a >= l) &&
+                                    Object.keys(t.O).every((e) => t.O[e](o[u]))
+                                        ? o.splice(u--, 1)
+                                        : ((i = !1), l < a && (a = l));
+                                if (i) {
+                                    e.splice(s--, 1);
+                                    var f = n();
+                                    void 0 !== f && (r = f);
+                                }
+                            }
+                            return r;
+                        }
+                        l = l || 0;
+                        for (var s = e.length; s > 0 && e[s - 1][2] > l; s--)
+                            e[s] = e[s - 1];
+                        e[s] = [o, n, l];
+                    }),
+                    (t.n = (e) => {
+                        var r = e && e.__esModule ? () => e.default : () => e;
+                        return t.d(r, { a: r }), r;
+                    }),
+                    (t.d = (e, r) => {
+                        for (var o in r)
+                            t.o(r, o) &&
+                                !t.o(e, o) &&
+                                Object.defineProperty(e, o, {
+                                    enumerable: !0,
+                                    get: r[o],
+                                });
+                    }),
+                    (t.o = (e, r) =>
+                        Object.prototype.hasOwnProperty.call(e, r)),
+                    (t.r = (e) => {
+                        "undefined" != typeof Symbol &&
+                            Symbol.toStringTag &&
+                            Object.defineProperty(e, Symbol.toStringTag, {
+                                value: "Module",
+                            }),
+                            Object.defineProperty(e, "__esModule", {
+                                value: !0,
+                            });
+                    }),
+                    (() => {
+                        t.b = document.baseURI || self.location.href;
+                        var e = { 861: 0 };
+                        t.O.j = (r) => 0 === e[r];
+                        var r = (r, o) => {
+                                var n,
+                                    l,
+                                    [a, i, u] = o,
+                                    f = 0;
+                                if (a.some((r) => 0 !== e[r])) {
+                                    for (n in i) t.o(i, n) && (t.m[n] = i[n]);
+                                    if (u) var s = u(t);
+                                }
+                                for (r && r(o); f < a.length; f++)
+                                    (l = a[f]),
+                                        t.o(e, l) && e[l] && e[l][0](),
+                                        (e[l] = 0);
+                                return t.O(s);
+                            },
+                            o = (self.webpackChunkloader_plugin_src =
+                                self.webpackChunkloader_plugin_src || []);
+                        o.forEach(r.bind(null, 0)),
+                            (o.push = r.bind(null, o.push.bind(o)));
+                    })();
+            })();
+        </script>
+        <script defer="defer" src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </body>
+</html>
